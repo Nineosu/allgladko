@@ -74,6 +74,11 @@ $color-pink: #D1A19C
 	background: url(../icons/swiper-arrow.png) no-repeat center
 	transform: rotate(180deg)
 
+.section-title
+	font-size: 50px
+	line-height: 58px
+	color: rgba(36, 36, 36, 1)
+
 .main-section
 	min-height: 1000px
 	margin-bottom: 100px
@@ -1037,9 +1042,9 @@ header
 		justify-content: space-between
 		border-radius: 35px
 		background: linear-gradient(150deg, rgba(253, 163, 217, 0.08) -5.09%, rgba(249, 219, 237, 0.50) 209.14%)
+		padding: 20px
 	&__img-main
 		border-radius: 20px
-		margin: 20px 0 20px 20px
 	&__title-zaiavka
 		color: #242424
 		font-size: 35px
@@ -1342,6 +1347,8 @@ input[type='tel']
 		font-weight: 400
 		line-height: normal
 		padding-bottom: 22px
+	&__img333
+		width: 100%
 	&__title2
 		color: #2D2D2D
 		font-size: 50px
@@ -2478,12 +2485,14 @@ input[type='tel']
 			left: 395px
 	&__wrapper1
 		display: flex
+		align-items: center
 		border-radius: 15px
 		background: linear-gradient(153.18deg, rgba(253, 163, 217, 0.08) 12.433%,rgba(249, 219, 237, 0.5) 172.352%)
 		margin-bottom: 20px
+		padding: 15px
+		gap: 25px
 		&-img
-			margin-right: 24px
-			padding: 16px 0 16px 16px
+			width: 100%
 		&-texts
 			display: flex
 			align-items: center
@@ -2498,6 +2507,7 @@ input[type='tel']
 			margin-right: 5px
 		&-buttons
 			display: flex
+			align-items: center
 			gap: 10px
 		&-button1
 			border-radius: 15px
@@ -2515,12 +2525,13 @@ input[type='tel']
 			border: 1px solid rgb(209, 161, 156)
 			border-radius: 15px
 			background: rgb(255, 255, 255)
-			padding: 15px 46px
+			padding: 15px 30px
 			color: rgb(194, 126, 119)
 			font-size: 18px
 			font-weight: 400
 			line-height: 21px
 			cursor: pointer
+			white-space: nowrap
 			&:hover
 				background: rgb(255, 245, 245)
 	&-descr
@@ -2536,6 +2547,15 @@ input[type='tel']
 			font-size: 20px
 			font-weight: 400
 			line-height: 23px
+.uslugi-wrapper .fifth-section__wrapper-item
+	grid-template-columns: 5fr 3fr 3fr 1fr
+	gap: 10px
+.uslugi-wrapper .fifth-section__wrapper-nav
+	grid-template-columns: 35% 17% 25%
+.uslugi-wrapper .fifth-section__wrapper-item ::after
+	right: 24%
+.uslugi-wrapper .fifth-section__text-mw
+	color: #000
 
 .mb-0
 	margin-bottom: 28px
@@ -2616,31 +2636,20 @@ input[type='tel']
 			background: rgba(194, 126, 119, 0.20)
 			top: 1957px
 			left: 391px
+	&__block
+		position: relative
 	&__wrapper
 		display: flex
+		gap: 10px
 		margin-bottom: 40px
-	&__img1
-		margin-right: 5px
+	&__img
+		width: 100%
 		border-radius: 15px
 		position: relative
-	&__img2
-		border-radius: 15px
-		position: relative
-	&__span1
+	&__span
 		position: absolute
-		top: 2255px
-		left: 406px
-		color: rgb(0, 0, 0)
-		font-size: 20px
-		font-weight: 400
-		line-height: 132.8%
-		border-radius: 15px
-		background: rgb(255, 208, 215)
-		padding: 5px 24px
-	&__span2
-		position: absolute
-		top: 2255px
-		left: 874px
+		bottom: 5%
+		left: 2.5%
 		color: rgb(0, 0, 0)
 		font-size: 20px
 		font-weight: 400
@@ -2874,12 +2883,15 @@ input[type='tel']
 .modal__callback-after 
 	display: none
 	gap: 20px
-	align-items: flex-start
+	align-items: center
 
 // .modal__after-img
 // 	max-width: 320px
 // 	max-height: 320px
 // 	width: 100%
+
+.modal__after-img
+	width: 100%
 
 .modal__after-text
 	font-size: 18px
@@ -2956,7 +2968,7 @@ input[type='tel']
 
 @media (max-width: 1300px)
 	.uslugivl-display
-		display: block
+		// display: block
 	.uslugivl__title-circle
 		display: none
 	.blog1__title4-circle
@@ -3410,8 +3422,15 @@ input[type='tel']
 		margin-bottom: 0
 	.tenth-section__title2-circle2
 		top: 1472px
+	.uslugivl-display
+		flex-direction: column-reverse
+	.uslugivl-display-left
+		margin-bottom: 15px
 
 @media ( max-width: 840px)
+	.section-title
+		font-size: 35px
+		line-height: 42px
 	.main-section__ul
 		display: none
 	.main-section__town
@@ -3485,7 +3504,10 @@ input[type='tel']
 		display: flex
 		overflow-x: auto
 	.uslugivl-special__wrapper
-		display: block
+		flex-direction: column
+		align-items: center
+	.uslugivl-special__img 
+		width: 100%
 	.uslugivl-special__title2
 		margin-top: 0
 		margin-bottom: 10px
@@ -3505,7 +3527,8 @@ input[type='tel']
 	.uslugivl-procedure__wrapper
 		margin-bottom: 20px
 	.uslugivl-equipment__wrapper
-		display: block
+		flex-direction: column
+		align-items: center
 	.uslugivl-equipment__img
 		margin-bottom: 0
 	.uslugivl-equipment__title2
@@ -3592,6 +3615,8 @@ input[type='tel']
 		grid-template-columns: unset
 		grid-template-areas: "uslugi btn" "money money" "money-abon money-abon"
 		row-gap: 15px
+	.uslugi-wrapper .fifth-section__wrapper-item
+		grid-template-columns: unset
 	.fifth-section__uslugi
 		grid-area: uslugi
 	.fifth-section__money
@@ -3620,10 +3645,11 @@ input[type='tel']
 		flex-direction: column
 		align-items: center
 		padding: 0 10px
+		gap: 15px
 	.eight-section__title-zaiavka
 		display: none
 	.eight-section__title-zaiavka.adaptive-visible 
-		display: inline
+		display: block
 		margin-bottom: 15px
 	.eight-section__wrapper2-descr
 		margin: 0
@@ -3677,6 +3703,9 @@ input[type='tel']
 	.uslugi-section__wrapper
 		padding: 0
 @media ( max-width: 490px)
+	.section-title
+		font-size: 28px
+		line-height: 32px
 	.main-section__img
 		width: 449px
 		height: 481px
@@ -3685,7 +3714,7 @@ input[type='tel']
 		margin-bottom: 18px
 	.main-section__btn
 		font-size: 18px
-		padding: 17px 45px
+		padding: 17px
 		border-radius: 15px
 	.main-section__square1
 		width: 64px
@@ -3832,35 +3861,38 @@ input[type='tel']
 		font-size: 27px
 	.strelka-display__none
 		display: none
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.main-section__block1-left
+		margin-right: 10px
+		padding-right: 10px
+	.main-section__present
+		margin-bottom: 10px
+	.main-section__money-first
+		font-size: 40px
+	.main-section__block1-mini
+		padding: 15px
+	.main-section__money
+		width: max-content
+	.eight-section__img-main
+		width: 100%
+	.eight-section__block1-mini
+		min-width: unset
+		padding-right: 0
+	.eight-section__block1-left
+		padding-right: 5px
+		margin-right: 5px
+	.eight-section__squares
+		gap: 5px
+	.eight-section__money-first
+		font-size: 24px
+	.ninth-section__wrapper3
+		padding: 15px
+	.uslugi-section__wrapper
+		grid-template-columns: 1fr
+	.blog1-part6__card
+		display: flex
+		flex-direction: column
+		align-items: center
+	.blog1-part6__text
+		padding: 0
+	.modal__callback-after
+		flex-direction: column
